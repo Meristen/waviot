@@ -1,0 +1,52 @@
+.company {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 30px;
+  z-index: 10;
+  &__card {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    max-width: 1530px;
+    height: 800px;
+    position: relative;
+  }
+  &__card-color {
+    width: 50%;
+    &.color-one {
+      background-color: #95102c;
+    }
+    &.color-two {
+      background-color: #e5e5e5;
+    }
+    &.color-three {
+      background-color: #080f32;
+    }
+    &.color-four {
+      background-color: #44330e;
+    }
+    &.color-five {
+      background-color: #e5e5e5;
+    }
+  }
+  &__card-img {
+    width: 50%;
+    overflow: hidden;
+    position: relative;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &__card-title {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    font-size: 50px;
+    text-align: center;
+    transform: translate(-50%);
+    color: aliceblue;
+  }
+}
