@@ -1,0 +1,58 @@
+.equipment {
+  width: 100%;
+  margin: 0 auto;
+  h1 {
+    font-size: 50px;
+    font-weight: 400;
+    text-align: center;
+    margin: 50px 0;
+  }
+  p {
+    font-size: 20px;
+    color: var(--extra-color);
+    max-width: 800px;
+    text-align: center;
+    margin: 0 auto;
+    line-height: 30px;
+  }
+  &__cards {
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    .card {
+      width: 382.5px;
+      height: 500px;
+      border: 1px solid #e4e1e1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-bottom: 50px;
+      cursor: pointer;
+      img {
+        width: 80%;
+        height: 300px;
+        margin: 0 auto;
+        transition: 0.5s;
+      }
+      img:hover {
+        transform: scale(1.2);
+      }
+      h3 {
+        padding-left: 40px;
+        text-transform: uppercase;
+        color: var(--main-gray);
+        font-weight: 400;
+      }
+      p {
+        color: var(--main-gray);
+        padding: 10px 20px;
+      }
+    }
+  }
+  &__form {
+    width: 1400px;
+    margin: 0 auto;
+    padding: 0 50px;
+  }
+}

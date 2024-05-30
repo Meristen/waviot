@@ -9,11 +9,10 @@ const CompanyBlock = ({ title, image, colorClass, titleColor }) => {
         <div className="company__card-img">
           <img src={image} alt="company" />
         </div>
-        <div className={`company__card-color ${colorClass}`}>
-          <h1 style={{ color: titleColor }} className="company__card-title">
-            {title}
-          </h1>
-        </div>
+        <div className={`company__card-color ${colorClass}`}></div>
+        <h1 style={{ color: titleColor }} className="company__card-title">
+          {title}
+        </h1>
       </div>
     </div>
   );

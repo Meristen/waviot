@@ -14,7 +14,10 @@
     margin-right: auto;
   }
   &__logo {
-    margin-top: 20px;
+    width: 100px;
+    height: 70px;
+  }
+  &__logo img {
     width: 100px;
     height: 70px;
   }
@@ -37,16 +40,14 @@
       position: absolute;
       top: 100%;
       left: 0;
-      background-color: #070d1be6;
+      background-color: var(--rich-white);
       width: 100%;
-      border-top: 1px solid var(--m-silver);
       display: none;
     }
   }
 
   a {
     text-transform: uppercase;
-    // color: #444444;
     font-weight: 500;
     transition: all 0.3s ease;
 
@@ -68,7 +69,9 @@
       color: var(--m-silver);
     }
   }
+
   .show {
     display: flex !important;
+    color: var(--extra-color);
   }
 }

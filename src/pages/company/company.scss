@@ -1,18 +1,16 @@
 @import "~slick-carousel/slick/slick.css";
 @import "~slick-carousel/slick/slick-theme.css";
 
-.slick-vertical .slick-slide {
-  height: auto;
+.slick-dots li button:before {
+  font-size: 16px;
+  color: blue;
 }
-
+.slick-dots li.slick-active button:before {
+  color: red;
+}
 .slick-dots {
   bottom: 10px;
 }
-
-.container {
-  overflow: hidden;
+.slick-dots li {
+  margin: 0 5px;
 }
-
-// .company {
-
-// }

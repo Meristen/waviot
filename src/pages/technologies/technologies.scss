@@ -2,37 +2,11 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  background-color: #f2f2f2;
+  background-color: var(--bg-color);
   padding: 0 136px;
-  // &__side-bar {
-  //   // display: flex;
-  //   position: fixed;
-  //   top: 300px;
-  //   background-color: #e5e5e5;
-  //   // height: 600px;
-  //   width: 15%;
-  //   padding: 30px;
-  //   font-size: 20px;
-  // }
-  // ul {
-  //   flex-direction: column;
-  //   justify-content: center;
-  // }
-  // &__list {
-  //   display: flex;
-  // }
-  // &__list li {
-  //   padding: 10px 20px;
-  // }
-  // &__list li a {
-  //   color: #444444;
-  // }
-  // &__list li a:hover {
-  //   color: #95102c;
-  // }
   &__block-1 {
     margin: 0 auto;
-    background-color: #f2f2f2;
+    background-color: var(--bg-color);
     width: 80%;
   }
   &__info {
@@ -43,7 +17,7 @@
       text-align: center;
     }
     p {
-      color: #95102c;
+      color: var(--extra-color);
       text-align: center;
       font-size: 27px;
       font-weight: 500;
@@ -61,11 +35,11 @@
   h3 {
     font-size: 30px;
     font-weight: 300;
-    color: #95102c;
+    color: var(--extra-color);
     margin-bottom: 50px;
   }
   p {
-    font-size: 24px;
+    font-size: 20px;
     margin-bottom: 30px;
   }
   &__working-img img {
@@ -82,12 +56,15 @@
     flex-wrap: wrap;
   }
   &__properties-item {
-    width: 500px;
+    width: 450px;
+  }
+  &__properties-item p {
+    font-size: 17px;
   }
   &__properties-item .icon {
     width: 30px;
     height: 30px;
-    background-color: #95102c;
+    background-color: var(--extra-color);
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -102,7 +79,7 @@
     width: 80%;
     display: flex;
     justify-content: space-between;
-    border-top: 1px solid #e5e5e5;
+    border-top: 1px solid var(--rich-white);
     padding: 10px 0;
 
     h4 {
@@ -123,10 +100,19 @@
     width: 80%;
     margin: 10px 0;
   }
-  .item-desc {
+  &__list {
     margin-top: 50px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
+    padding: 30px;
+    h3 {
+      font-size: 19px;
+      color: #000000;
+      font-weight: 500;
+      margin-bottom: 20px;
+    }
+    &__properties-item {
+    }
   }
 }

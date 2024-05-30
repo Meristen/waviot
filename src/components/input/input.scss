@@ -1,0 +1,21 @@
+input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 20px;
+  background-color: var(--bg-color);
+  border: none;
+  outline: none;
+  color: var(--light-gray);
+  transition: all 1s;
+}
+input::placeholder {
+  color: #a7a3a3;
+  transition: all 0.5s;
+}
+input:hover::placeholder {
+  color: var(--light-gray);
+}
+input:hover {
+  border-bottom: 1px solid var(--light-gray);
+  // color: var(--rich-white);
+}

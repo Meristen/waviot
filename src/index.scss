@@ -1,9 +1,23 @@
+:root {
+  --bg-color: #f2f2f2;
+  --extra-color: #95102c;
+  --rich-white: #e5e5e5;
+  --main-gray: #333333;
+  --light-gray: #444444;
+  --red-color: #a30027;
+  --blue-color: #3b8de0;
+}
+
+// Для экранов шириной до 992px ( большие смартфоны)
+// Для экранов шириной до 768px ( планшеты и смартфоны)
+// Для экранов шириной до 576px ( маленькие смартфоны)
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   // user-select: none;
   scroll-behavior: smooth;
+  font-family: Rubik, "sun-serif";
 }
 body {
   background-color: #fff;
@@ -15,11 +29,13 @@ li {
   list-style: none;
 }
 .wrapper {
-  max-width: 1550px;
+  // max-width: 1550px;
   margin: 0 auto;
 }
 .container {
   max-width: 1530px;
+
   margin: 0 auto;
   // border: 1px solid gray;
+  background-color: var(--bg-color);
 }

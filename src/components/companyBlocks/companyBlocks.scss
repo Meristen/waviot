@@ -2,7 +2,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0 30px;
   z-index: 10;
   &__card {
     display: flex;
@@ -15,10 +14,10 @@
   &__card-color {
     width: 50%;
     &.color-one {
-      background-color: #95102c;
+      background-color: var(--extra-color);
     }
     &.color-two {
-      background-color: #e5e5e5;
+      background-color: var(--rich-white);
     }
     &.color-three {
       background-color: #080f32;
@@ -27,7 +26,7 @@
       background-color: #44330e;
     }
     &.color-five {
-      background-color: #e5e5e5;
+      background-color: var(--rich-white);
     }
   }
   &__card-img {
@@ -47,6 +46,35 @@
     font-size: 50px;
     text-align: center;
     transform: translate(-50%);
-    color: aliceblue;
+    color: var(--rich-white);
+  }
+  @media (max-width: 992px) {
+    &__card-title {
+      font-size: 30px;
+      top: 50%;
+    }
+  }
+  @media (max-width: 768px) {
+    &__card-color {
+      display: none;
+    }
+    &__card-img {
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    &__card-title {
+      position: absolute;
+      top: 30%;
+      left: 50%;
+      font-size: 20px;
+      text-align: center;
+      color: var(--rich-white);
+    }
   }
 }

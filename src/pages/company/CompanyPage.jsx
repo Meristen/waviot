@@ -1,13 +1,16 @@
+import React, { useRef } from "react";
+import Slider from "react-slick";
 import CompanyBlock from "../../components/companyBlocks/CompanyBlock";
 import "./company.scss";
-import React from "react";
 import image1 from "../../assets/image1.jpg";
 import image5 from "../../assets/image-5.jpg";
 import image4 from "../../assets/image4.jpg";
 import image2 from "../../assets/image2.jpg";
 import image3 from "../../assets/image3.jpg";
-import Slider from "react-slick";
+
 const CompanyPage = () => {
+  const sliderRef = useRef(null);
+
   const settings = {
     dots: true,
     infinite: true,
@@ -16,17 +19,27 @@ const CompanyPage = () => {
     slidesToScroll: 1,
     vertical: true,
     verticalSwiping: true,
+    arrows: false,
   };
+
+  const handleWheel = (event) => {
+    event.preventDefault();
+    if (event.deltaY < 0) {
+      sliderRef.current.slickPrev();
+    } else {
+      sliderRef.current.slickNext();
+    }
+  };
+
   return (
-    <section className="container">
-      <Slider {...settings}>
+    <section className="container" onWheel={handleWheel}>
+      <Slider ref={sliderRef} {...settings}>
         <CompanyBlock
           titleColor="white"
           colorClass="color-one"
           image={image1}
-          title="Вивиот Азия - компания комплексных цифровых решений."
+          title="БишкекПРИБОР - компания комплексных цифровых решений."
         />
-
         <CompanyBlock
           titleColor="darkRed"
           colorClass="color-two"
@@ -36,18 +49,18 @@ const CompanyPage = () => {
         <CompanyBlock
           colorClass="color-three"
           image={image4}
-          title="Сегодня беспроводная сеть LPWAN обеспечивает бесперебойную передачу данных по всей территории Республики Казахстан."
+          title="Сегодня беспроводная сеть LPWAN обеспечивает бесперебойную передачу данных по всей территории Кыргызской Республики."
         />
         <CompanyBlock
           colorClass="color-four"
           image={image2}
-          title="Сотни тысяч устройств WAVIOT ежедневно передаю миллионы сообщений в единый ситуационный Центр управления ЖКХ."
+          title="Сотни тысяч устройств WAVIOT ежедневно передают миллионы сообщений в единый ситуационный Центр управления ЖКХ."
         />
         <CompanyBlock
           titleColor="darkRed"
           colorClass="color-five"
           image={image3}
-          title=" Опираясь на собственные разработанные модели и алгоритмы, эксперты и ;аналитики WAVIOT подготавливают рекомендации для эффективного управления отдельными объектами и целыми городами.                    "
+          title="Опираясь на собственные разработанные модели и алгоритмы, эксперты и аналитики БишкекПрибор подготавливают рекомендации для эффективного управления отдельными объектами и целыми городами."
         />
       </Slider>
     </section>
