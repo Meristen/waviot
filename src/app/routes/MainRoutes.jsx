@@ -5,6 +5,7 @@ import CompanyPage from "../../pages/company/CompanyPage";
 import SolutionPage from "../../pages/solution/SolutionPage";
 import EquipmentPage from "../../pages/equipment/EquipmentPage";
 import ContactPage from "../../pages/contact/ContactPage";
+import CardViewPage from "../../pages/cardView/CardViewPage";
 const MainRoutes = () => {
   return (
     <Routes>
@@ -13,6 +14,7 @@ const MainRoutes = () => {
       <Route path="/solution" element={<SolutionPage />} />
       <Route path="/equipment" element={<EquipmentPage />} />
       <Route path="/contact" element={<ContactPage />} />
+      <Route path="/card/:cardId" element={<CardViewPage />} />
     </Routes>
   );
 };

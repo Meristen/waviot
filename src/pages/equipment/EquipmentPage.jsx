@@ -14,10 +14,88 @@ import img9 from "../../assets/pribor9.png";
 import img10 from "../../assets/pribor10.png";
 import img11 from "../../assets/pribor11.png";
 import Form from "../../components/form/Form";
+import { useNavigate } from "react-router-dom";
+import FormComponent from "../../components/formComponent/FormComponent";
+const cardData = [
+  {
+    id: "AKBA-C",
+    title: "аква-с",
+    img: img1,
+    description: "Счётчик воды со встроенным радиомодулем",
+  },
+  {
+    id: "AKBA-B",
+    title: "аква-в",
+    img: img2,
+    description: "Электронный счётчик воды со встроенным радиомодулем",
+  },
+  {
+    id: "FOBOS-1 light",
+    title: "фобос-1 лайт",
+    img: img3,
+    description: "Однофазный счётчик электричества с радиомодулем",
+  },
+  {
+    id: "FOBOS-1",
+    title: "фобос-1",
+    img: img4,
+    description: "Однофазный счётчик электричества с радиомодулем",
+  },
+  {
+    id: "FOBOS-3",
+    title: "фобос-3",
+    img: img5,
+    description: "Трёхфазный счётчик электричества с радиомодулем",
+  },
+  {
+    id: "FOBOS-3T",
+    title: "фобос-3т",
+    img: img6,
+    description:
+      "Трёхфазный трансформаторный счётчик электричества с радиомодулем",
+  },
+  {
+    id: "FOBOS-1S",
+    title: "фобос-1s",
+    img: img7,
+    description: "Однофазный сплит-счётчик электричества с радиомодулем",
+  },
+  {
+    id: "FOBOS-3s",
+    title: "фобос-3s",
+    img: img8,
+    description: "Трёхфазный сплит-счётчик электричества с радиомодулем",
+  },
+  {
+    id: "SGBU-G6",
+    title: "сгбу-g6",
+    img: img9,
+    description: "Счетчик газа со встроенным LPWAN-радиомодулем",
+  },
+  {
+    id: "MANHOLE-M",
+    title: "manhole-m",
+    img: img10,
+    description: "Датчик открытия крышки канализационного люка",
+  },
+  {
+    id: "BT-100",
+    title: "bt-100",
+    img: img11,
+    description: "Импульсный радиомодем",
+  },
+];
 const EquipmentPage = () => {
   useEffect(() => {
     Aos.init({ duration: 1000 });
   });
+
+  const navigate = useNavigate();
+
+  const handleCardClick = (id) => {
+    navigate(`/card/${id}`);
+  };
+
   return (
     <section className="container">
       <div className="equipment">
@@ -33,66 +111,21 @@ const EquipmentPage = () => {
           </p>
         </div>
         <div className="equipment__cards" data-aos="fade-up">
-          <div className="card">
-            <h3>аква-с</h3>
-            <img src={img1} alt="pribor-1" />
-            <p>Счётчик воды со встроенным радиомодулем</p>
-          </div>
-          <div className="card">
-            <h3>аква-в</h3>
-            <img src={img2} alt="pribor-2" />
-            <p>Электронный счётчик воды со встроенным радиомодулем</p>
-          </div>
-          <div className="card">
-            <h3>фобос-1 лайт</h3>
-            <img src={img3} alt="pribor-3" />
-            <p>Однофазный счётчик электричества с радиомодулем</p>
-          </div>
-          <div className="card">
-            <h3>фобос-1</h3>
-            <img src={img4} alt="pribor-4" />
-            <p>Однофазный счётчик электричества с радиомодулем</p>
-          </div>
-          <div className="card">
-            <h3>фобос-3</h3>
-            <img src={img5} alt="pribor-5" />
-            <p>Трёхфазный счётчик электричества с радиомодулем</p>
-          </div>
-          <div className="card">
-            <h3>фобос-3т</h3>
-            <img src={img6} alt="pribor-6" />
-            <p>
-              Трёхфазный трансформаторный счётчик электричества с радиомодулем
-            </p>
-          </div>
-          <div className="card">
-            <h3>фобос-1s</h3>
-            <img src={img7} alt="pribor-7" />
-            <p>Однофазный сплит-счётчик электричества с радиомодулем</p>
-          </div>
-          <div className="card">
-            <h3>фобос-3s</h3>
-            <img src={img8} alt="pribor-8" />
-            <p>Трёхфазный сплит-счётчик электричества с радиомодулем</p>
-          </div>
-          <div className="card">
-            <h3>сгбу-g6</h3>
-            <img src={img9} alt="pribor-9" />
-            <p>Счетчик газа со встроенным LPWAN-радиомодулем</p>
-          </div>
-          <div className="card">
-            <h3>manhole-m</h3>
-            <img src={img10} alt="pribor-10" />
-            <p>Датчик открытия крышки канализационного люка</p>
-          </div>
-          <div className="card">
-            <h3>bt-100</h3>
-            <img src={img11} alt="pribor-11" />
-            <p>Импульсный радиомодем</p>
-          </div>
+          {cardData.map((card) => (
+            <div
+              key={card.id}
+              className="card"
+              onClick={() => handleCardClick(card.id)}
+            >
+              <h3>{card.title}</h3>
+              <img src={card.img} alt={card.title} />
+              <p>{card.description}</p>
+            </div>
+          ))}
         </div>
         <div className="equipment__form">
-          <Form />
+          {/* <Form /> */}
+          <FormComponent />
         </div>
       </div>
     </section>

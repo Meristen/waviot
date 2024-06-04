@@ -4,6 +4,9 @@
   flex-direction: column;
   background-color: var(--bg-color);
   padding: 0 136px;
+  @media (max-width: 992px) {
+    padding: 0 40px;
+  }
   &__block-1 {
     margin: 0 auto;
     background-color: var(--bg-color);
@@ -112,7 +115,15 @@
       font-weight: 500;
       margin-bottom: 20px;
     }
-    &__properties-item {
+  }
+  @media (max-width: 992px) {
+    p {
+      font-size: 16px;
+    }
+    .block-5__item {
+      h4 {
+        font-size: 16px;
+      }
     }
   }
 }

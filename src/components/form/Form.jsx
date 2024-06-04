@@ -11,7 +11,6 @@ const Form = () => {
             Отправьте заявку и наши менеджеры свяжутся с вами, чтобы обсудить
             все детали.
           </h2>
-          <Button>Отправить заявку</Button>
         </div>
         <form className="feedback-form">
           <Input type="text" placeholder="Представтесь, пожалуйста" />
@@ -22,14 +21,12 @@ const Form = () => {
             <input type="checkbox" />
             <span>
               Я даю согласие на обработку моих
-              <a href="https://waviot.kz/policy/"> персональных данных.</a>
+              <a href="#"> персональных данных.</a>
             </span>
           </label>
+          <Button>Отправить заявку</Button>
         </form>
       </div>
-      {/* <div className="form-buttons">
-        <Button>Отправить заявку</Button>
-      </div> */}
     </div>
   );
 };

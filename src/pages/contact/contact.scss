@@ -46,4 +46,10 @@
       gap: 20px;
     }
   }
+  @media (max-width: 768px) {
+    &__support {
+      flex-direction: column;
+      gap: 30px;
+    }
+  }
 }

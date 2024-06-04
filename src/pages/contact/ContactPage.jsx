@@ -1,11 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./contact.scss";
 import iconTelegram from "../../assets/icon-telegram.svg";
 import Form from "../../components/form/Form";
 import iconWhatsup from "../../assets/icon-whatsapp.svg";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import FormComponent from "../../components/formComponent/FormComponent";
 const ContactPage = () => {
+  useEffect(() => {
+    Aos.init({ duration: 1000 });
+  });
   return (
     <section className="container">
       <div className="contact" data-aos="fade-up">
@@ -24,7 +28,7 @@ const ContactPage = () => {
 
           <a href="mailto:sales@m2m.kg">sales@m2m.kg</a>
         </div>
-        <div className="contact__support">
+        {/* <div className="contact__support">
           <h3>Техподдержка</h3>
           <ul>
             <li>
@@ -41,8 +45,9 @@ const ContactPage = () => {
               </a>
             </li>
           </ul>
-        </div>
-        <Form />
+        </div> */}
+        {/* <Form /> */}
+        <FormComponent />
       </div>
     </section>
   );

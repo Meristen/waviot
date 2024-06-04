@@ -1,0 +1,17 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 0 50px;
+}
+
+.card-view {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 30px;
+  width: 100%;
+  img {
+    width: 800px;
+  }
+}

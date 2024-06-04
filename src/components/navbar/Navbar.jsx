@@ -1,9 +1,7 @@
 import "./navbar.scss";
 import React, { useState } from "react";
-// import logo from "../../assets/logo.svg";
 import logo1 from "../../assets/pribor.jpg";
-import { FaPhoneAlt } from "react-icons/fa";
-import { IoMail } from "react-icons/io5";
+import logo2 from "../../assets/pribor1 (2).png";
 import { IoMdClose } from "react-icons/io";
 import { IoMenu } from "react-icons/io5";
 import { Link } from "react-router-dom";
@@ -20,7 +18,7 @@ const Navbar = () => {
             className="navbar__logo"
             onClick={() => setShowNav(false)}
           >
-            <img src={logo1} alt="logo" />
+            <img src={logo2} alt="logo" />
           </Link>
           <div className="navbar__links">
             <ul className={`${showNav ? "show" : ""}`}>

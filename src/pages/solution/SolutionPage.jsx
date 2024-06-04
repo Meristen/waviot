@@ -3,7 +3,7 @@ import "./solution.scss";
 import icon from "../../assets/icon.png";
 import Aos from "aos";
 import "aos/dist/aos.css";
-import Form from "../../components/form/Form";
+import FormComponent from "../../components/formComponent/FormComponent";
 const SolutionPage = () => {
   useEffect(() => {
     Aos.init({ duration: 1000 });
@@ -38,13 +38,12 @@ const SolutionPage = () => {
               <a href="#block-7">ОТЛИЧИЯ ОТ КОНКУРЕНТОВ</a>
             </li>
             <li>
-              <a href="#block-10">ОТЗЫВЫ О WAVIOT</a>
+              <a href="#block-10">ОТЗЫВЫ О БишкекПрибор</a>
             </li>
             <li>
               <a href="#block-8">ПРИСОЕДИНЯЙТЕСЬ</a>
             </li>
           </ul>
-          <p>листайте далее</p>
         </div>
         <div id="block-2" className="solution__block-2" data-aos="fade-up">
           <h2>проблема</h2>
@@ -118,7 +117,7 @@ const SolutionPage = () => {
         <div id="block-4" className="solution__block-4" data-aos="fade-up">
           <p>
             Предлагаем рассмотреть более надёжное и технологичное решение от
-            компании WAVIOT с расширенной гарантией и ответственностью за
+            компании БишкекПрибор с расширенной гарантией и ответственностью за
             результат.
           </p>
         </div>
@@ -190,7 +189,9 @@ const SolutionPage = () => {
         </div>
         <div id="block-6" className="solution__block-6">
           <h2>ПРЕИМУЩЕСТВА ДЛЯ ЖИЛЬЦОВ</h2>
-          <p className="bold">6 причин, по которым жильцы нуждаются в WAVIOT</p>
+          <p className="bold">
+            6 причин, по которым жильцы нуждаются в БишкекПрибор
+          </p>
           Автоматические системы учета и контроля ресурсов повышают уровень
           комфорта проживания в доме, обеспечивая прозрачность расчетов и
           безопасность жизни.
@@ -341,7 +342,7 @@ const SolutionPage = () => {
         <div id="block-9" className="solution__block-9">
           <h2>Присоединяйтесь</h2>
           <p className="bold">
-            Повышайте качество жизни с умным оборудованием WAVIOT
+            Повышайте качество жизни с умным оборудованием БишкекПрибор
           </p>
           <p>
             Установка приборов автоматического контроля и учета ресурсов —
@@ -394,7 +395,8 @@ const SolutionPage = () => {
             </div>
           </div>
         </div>
-        <Form />
+        {/* <Form /> */}
+        <FormComponent />
       </div>
     </section>
   );

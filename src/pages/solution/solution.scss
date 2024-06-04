@@ -2,7 +2,15 @@
   width: 100%;
   padding: 0 136px;
   border: 1px solid #dddada;
-
+  @media (max-width: 992px) {
+    padding: 0 20px;
+  }
+  @media (max-width: 768px) {
+    padding: 0 20px;
+  }
+  @media (max-width: 576px) {
+    padding: 0 20px;
+  }
   &__block-1 {
     h1 {
       font-size: 50px;
@@ -19,11 +27,11 @@
     }
   }
   &__links {
-    padding: 50px 120px;
+    padding: 50px 90px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 10px;
+    gap: 20px;
   }
   &__links li {
     margin: 0 6px 6px 0;
@@ -38,13 +46,13 @@
   }
   &__block-2 {
     margin-top: 50px;
-    width: 1300px;
+    max-width: 1300px;
     border: 1px solid var(--main-gray);
     border-radius: 10px;
     padding: 40px;
     h2 {
       font-size: 20px;
-      width: 140px;
+      max-width: 140px;
       padding: 10px 20px;
       text-transform: uppercase;
       background-color: var(--extra-color);
@@ -53,7 +61,7 @@
     }
     p {
       margin-top: 30px;
-      width: 840px;
+      max-width: 840px;
       font-size: 60px;
       font-weight: 300;
       color: var(--extra-color);
@@ -66,7 +74,7 @@
     gap: 20px;
   }
   &__item {
-    width: 390px;
+    max-width: 390px;
     background-color: #fff;
     gap: 14px;
     border-radius: 10px;
@@ -74,7 +82,7 @@
   }
 
   &__item .icon {
-    width: 30px;
+    max-width: 30px;
     height: 30px;
     background-color: var(--extra-color);
     border-radius: 50%;
@@ -89,13 +97,13 @@
   }
   &__block-3 {
     margin-top: 50px;
-    width: 1300px;
+    max-width: 1300px;
     border: 1px solid var(--main-gray);
     border-radius: 10px;
     padding: 40px;
     h2 {
       font-size: 20px;
-      width: 230px;
+      max-width: 230px;
       padding: 10px 20px;
       text-transform: uppercase;
       background-color: var(--extra-color);
@@ -104,7 +112,7 @@
     }
     p {
       margin-top: 30px;
-      width: 840px;
+      max-width: 840px;
       font-size: 60px;
       font-weight: 300;
       color: var(--extra-color);
@@ -112,12 +120,12 @@
   }
   &__block-4 {
     margin-top: 50px;
-    width: 1300px;
+    max-width: 1300px;
     border-radius: 10px;
     padding: 40px;
     p {
       margin-top: 30px;
-      width: 840px;
+      max-width: 840px;
       font-size: 50px;
       font-weight: 300;
       color: var(--light-gray);
@@ -125,13 +133,13 @@
   }
   &__block-5 {
     margin-top: 50px;
-    width: 1300px;
+    max-width: 1300px;
     border: 1px solid var(--main-gray);
     border-radius: 10px;
     padding: 40px;
     h2 {
       font-size: 20px;
-      width: 300px;
+      max-width: 300px;
       padding: 10px 20px;
       text-transform: uppercase;
       background-color: var(--blue-color);
@@ -140,7 +148,7 @@
     }
     .bold {
       margin-top: 30px;
-      width: 680px;
+      max-width: 680px;
       font-size: 60px;
       font-weight: 300;
       color: #000000;
@@ -156,13 +164,13 @@
   }
   &__block-6 {
     margin-top: 50px;
-    width: 1300px;
+    max-width: 1300px;
     border: 1px solid var(--main-gray);
     border-radius: 10px;
     padding: 40px;
     h2 {
       font-size: 20px;
-      width: 360px;
+      max-width: 360px;
       padding: 10px 20px;
       text-transform: uppercase;
       background-color: var(--blue-color);
@@ -171,7 +179,7 @@
     }
     .bold {
       margin-top: 30px;
-      width: 840px;
+      max-width: 840px;
       font-size: 60px;
       font-weight: 300;
       color: #000000;
@@ -187,12 +195,12 @@
   }
   &__block-7 {
     margin-top: 50px;
-    width: 1300px;
+    max-width: 1300px;
     border-radius: 10px;
     padding: 40px;
     p {
       margin-top: 30px;
-      width: 840px;
+      max-width: 840px;
       font-size: 50px;
       font-weight: 300;
       color: var(--light-gray);
@@ -200,13 +208,13 @@
   }
   &__block-8 {
     margin-top: 50px;
-    width: 1300px;
+    max-width: 1300px;
     border: 1px solid var(--main-gray);
     border-radius: 10px;
     padding: 40px;
     h2 {
       font-size: 20px;
-      width: 360px;
+      max-width: 360px;
       padding: 10px 20px;
       text-transform: uppercase;
       background-color: var(--blue-color);
@@ -215,7 +223,7 @@
     }
     .bold {
       margin-top: 30px;
-      width: 840px;
+      max-width: 840px;
       font-size: 60px;
       font-weight: 300;
       color: #000000;
@@ -231,13 +239,13 @@
   }
   &__block-9 {
     margin-top: 50px;
-    width: 1300px;
+    max-width: 1300px;
     border: 1px solid var(--main-gray);
     border-radius: 10px;
     padding: 40px;
     h2 {
       font-size: 20px;
-      width: 250px;
+      max-width: 250px;
       padding: 10px 20px;
       text-transform: uppercase;
       background-color: var(--extra-color);
@@ -246,7 +254,7 @@
     }
     .bold {
       margin-top: 30px;
-      width: 840px;
+      max-width: 840px;
       font-size: 60px;
       font-weight: 300;
       color: var(--extra-color);
@@ -259,14 +267,14 @@
   }
   &__block-10 {
     margin-top: 50px;
-    width: 1300px;
+    max-width: 1300px;
     border: 1px solid var(--main-gray);
     border-radius: 10px;
     padding: 40px;
 
     h2 {
       font-size: 20px;
-      width: 120px;
+      max-width: 120px;
       padding: 10px 20px;
       text-transform: uppercase;
       background-color: var(--extra-color);
@@ -275,7 +283,7 @@
     }
     .bold {
       margin-top: 30px;
-      width: 820px;
+      max-width: 820px;
       font-size: 60px;
       font-weight: 300;
       color: var(--extra-color);
@@ -288,5 +296,64 @@
   }
   &__list &__item p {
     font-size: 17px;
+  }
+  // Медиа запросы
+  @media (max-width: 1200px) {
+    &__links {
+      padding: 20px 30px;
+    }
+    &__block-2,
+    &__block-3,
+    &__block-4,
+    &__block-7 {
+      p {
+        font-size: 40px;
+      }
+    }
+    .bold {
+      font-size: 40px;
+    }
+  }
+  // @media (max-width: 992px) {
+  // }
+  @media (max-width: 768px) {
+    &__links {
+      // padding: 20px 30px;
+    }
+    &__block-2,
+    &__block-3,
+    &__block-4,
+    &__block-7 {
+      p {
+        font-size: 30px;
+      }
+    }
+    .bold {
+      font-size: 30px;
+    }
+  }
+  @media (max-width: 576px) {
+    &__block-1 {
+      p {
+        font-size: 16px;
+      }
+      h1 {
+        font-size: 25px;
+      }
+    }
+    &__links {
+      padding: 20px 30px;
+    }
+    &__block-2,
+    &__block-3,
+    &__block-4,
+    &__block-7 {
+      p {
+        font-size: 20px;
+      }
+    }
+    .bold {
+      font-size: 20px;
+    }
   }
 }
