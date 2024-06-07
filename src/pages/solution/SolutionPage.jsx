@@ -395,7 +395,6 @@ const SolutionPage = () => {
             </div>
           </div>
         </div>
-        {/* <Form /> */}
         <FormComponent />
       </div>
     </section>

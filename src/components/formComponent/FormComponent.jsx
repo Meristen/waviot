@@ -1,7 +1,323 @@
-import React, { useState } from "react";
+// import React, { useState } from "react";
+// import Input from "../input/Input";
+// import Button from "../button/Button";
+// import "./formComponent.scss";
+
+// const FormComponent = ({ cardId }) => {
+//   const [formData, setFormData] = useState({
+//     firstname: "",
+//     lastname: "-",
+//     mobile: "",
+//     email: "",
+//     company: "",
+//     description: "",
+//     leadsource: "Через поиск - m2m.kg",
+//     urlPage: cardId,
+//   });
+
+//   const handleChange = (e) => {
+//     const { name, value } = e.target;
+//     setFormData({
+//       ...formData,
+//       [name]: value,
+//     });
+//     console.log(formData);
+//   };
+
+//   const handleSubmit = (e) => {
+//     e.preventDefault();
+
+//     const requiredFields = [
+//       "firstname",
+//       "mobile",
+//       "email",
+//       "company",
+//       "description",
+//       "urlPage",
+//     ];
+//     for (let field of requiredFields) {
+//       if (!formData[field]) {
+//         alert(`Поле ${field} обязательно для заполнения`);
+//         return;
+//       }
+//     }
+
+//     document.getElementById("__vtigerWebForm").submit();
+//   };
+
+//   return (
+//     <div className="formComp">
+//       <h3>
+//         Отправьте заявку и наши менеджеры свяжутся с вами, чтобы обсудить все
+//         детали.
+//       </h3>
+//       <form
+//         id="__vtigerWebForm"
+//         name="m2m.kg"
+//         action="https://vtiger.crm.kg/modules/Webforms/capture.php"
+//         method="post"
+//         acceptCharset="utf-8"
+//         encType="multipart/form-data"
+//         onSubmit={handleSubmit}
+//       >
+//         <Input
+//           type="hidden"
+//           name="__vtrftk"
+//           value="sid:849451ba6957cca3e1e69a526859b8d4d26babe8,1717221827"
+//         />
+//         <Input
+//           type="hidden"
+//           name="publicid"
+//           value="fe5bd7134852ad488f2ff3c9196a8ea7"
+//         />
+//         <Input type="hidden" name="urlencodeenable" value="1" />
+//         <Input type="hidden" name="name" value="m2m.kg" />
+//         <Input type="hidden" name="lastname" value="-" required />
+//         <Input type="hidden" name="cf_1326" />
+//         <Input type="hidden" name="leadsource" value={formData.leadsource} />
+
+//         <div>
+//           <label htmlFor="firstname">Имя*</label>
+//           <Input
+//             type="text"
+//             name="firstname"
+//             value={formData.firstname}
+//             onChange={handleChange}
+//             required
+//           />
+//         </div>
+
+//         <div>
+//           <label htmlFor="mobile">Моб.*</label>
+//           <Input
+//             type="text"
+//             name="mobile"
+//             value={formData.mobile}
+//             onChange={handleChange}
+//             required
+//           />
+//         </div>
+
+//         <div>
+//           <label htmlFor="email">Email*</label>
+//           <Input
+//             type="email"
+//             name="email"
+//             value={formData.email}
+//             onChange={handleChange}
+//             required
+//           />
+//         </div>
+
+//         <div>
+//           <label htmlFor="company">Организация*</label>
+//           <Input
+//             type="text"
+//             name="company"
+//             value={formData.company}
+//             onChange={handleChange}
+//             required
+//           />
+//         </div>
+
+//         <div>
+//           <label htmlFor="description">Описание*</label>
+//           <Input
+//             type="text"
+//             name="description"
+//             value={formData.description}
+//             onChange={handleChange}
+//             required
+//           />
+//         </div>
+//         <div>
+//           <label htmlFor="urlPage">urlPage</label>
+//           <Input
+//             type="text"
+//             name="urlPage"
+//             value={formData.urlPage}
+//             onChange={handleChange}
+//             required
+//           />
+//         </div>
+
+//         <div>
+//           {/* <Input type="submit" value="Submit" /> */}
+//           <Button>отправить заявку</Button>
+//         </div>
+//       </form>
+//     </div>
+//   );
+// };
+
+// export default FormComponent;
+
+// !
+// import React, { useEffect, useState } from "react";
+// import Input from "../input/Input";
+// import Button from "../button/Button";
+// import "./formComponent.scss";
+
+// const FormComponent = ({ cardId }) => {
+//   const [formData, setFormData] = useState({
+//     firstname: "",
+//     lastname: "-",
+//     mobile: "",
+//     email: "",
+//     company: "",
+//     description: "",
+//     leadsource: "Через поиск - m2m.kg",
+//     urlPage: "",
+//   });
+//   useEffect(() => {
+//     setFormData((prevFormData) => ({
+//       ...prevFormData,
+//       landingPageUrl: window.location.href,
+//     }));
+//   }, []);
+
+//   const handleChange = (e) => {
+//     const { name, value } = e.target;
+//     setFormData({
+//       ...formData,
+//       [name]: value,
+//     });
+//     console.log(formData);
+//   };
+
+//   const handleSubmit = (e) => {
+//     e.preventDefault();
+
+//     const requiredFields = [
+//       "firstname",
+//       "mobile",
+//       "email",
+//       "company",
+//       "description",
+//       "urlPage",
+//     ];
+//     for (let field of requiredFields) {
+//       if (!formData[field]) {
+//         alert(`Поле ${field} обязательно для заполнения`);
+//         return;
+//       }
+//     }
+
+//     document.getElementById("__vtigerWebForm").submit();
+//   };
+
+//   return (
+//     <div className="formComp">
+//       <h3>
+//         Отправьте заявку и наши менеджеры свяжутся с вами, чтобы обсудить все
+//         детали.
+//       </h3>
+//       <form
+//         id="__vtigerWebForm"
+//         name="m2m.kg"
+//         action="https://vtiger.crm.kg/modules/Webforms/capture.php"
+//         method="post"
+//         acceptCharset="utf-8"
+//         encType="multipart/form-data"
+//         onSubmit={handleSubmit}
+//       >
+//         <Input
+//           type="hidden"
+//           name="__vtrftk"
+//           value="sid:849451ba6957cca3e1e69a526859b8d4d26babe8,1717221827"
+//         />
+//         <Input
+//           type="hidden"
+//           name="publicid"
+//           value="fe5bd7134852ad488f2ff3c9196a8ea7"
+//         />
+//         <Input type="hidden" name="urlencodeenable" value="1" />
+//         <Input type="hidden" name="name" value="m2m.kg" />
+//         <Input type="hidden" name="lastname" value="-" required />
+//         <Input type="hidden" name="cf_1326" />
+//         <Input type="hidden" name="leadsource" value={formData.leadsource} />
+
+//         <div>
+//           <label htmlFor="firstname">Имя*</label>
+//           <Input
+//             type="text"
+//             name="firstname"
+//             value={formData.firstname}
+//             onChange={handleChange}
+//             required
+//           />
+//         </div>
+
+//         <div>
+//           <label htmlFor="mobile">Моб.*</label>
+//           <Input
+//             type="text"
+//             name="mobile"
+//             value={formData.mobile}
+//             onChange={handleChange}
+//             required
+//           />
+//         </div>
+
+//         <div>
+//           <label htmlFor="email">Email*</label>
+//           <Input
+//             type="email"
+//             name="email"
+//             value={formData.email}
+//             onChange={handleChange}
+//             required
+//           />
+//         </div>
+
+//         <div>
+//           <label htmlFor="company">Организация*</label>
+//           <Input
+//             type="text"
+//             name="company"
+//             value={formData.company}
+//             onChange={handleChange}
+//             required
+//           />
+//         </div>
+
+//         <div>
+//           <label htmlFor="description">Описание*</label>
+//           <Input
+//             type="text"
+//             name="description"
+//             value={formData.description}
+//             onChange={handleChange}
+//             required
+//           />
+//         </div>
+//         <div>
+//           <label htmlFor="urlPage">urlPage</label>
+//           <Input
+//             type="text"
+//             name="urlPage"
+//             value={formData.urlPage}
+//             onChange={handleChange}
+//             required
+//           />
+//         </div>
+
+//         <div>
+//           {/* <Input type="submit" value="Submit" /> */}
+//           <Button>отправить заявку</Button>
+//         </div>
+//       </form>
+//     </div>
+//   );
+// };
+
+// export default FormComponent;
+
+import React, { useEffect, useState } from "react";
+import Input from "../input/Input";
+import Button from "../button/Button";
 import "./formComponent.scss";
-import { useNavigate } from "react-router-dom";
-import Button from "../../components/button/Button";
+
 const FormComponent = ({ cardId }) => {
   const [formData, setFormData] = useState({
     firstname: "",
@@ -9,27 +325,37 @@ const FormComponent = ({ cardId }) => {
     mobile: "",
     email: "",
     company: "",
-    description: "",
+    description: cardId,
     leadsource: "Через поиск - m2m.kg",
-    cardId: cardId,
+    urlPage: window.location,
   });
-  const navigate = useNavigate();
+
+  // useEffect(() => {
+  //   setFormData((prevFormData) => ({
+  //     ...prevFormData,
+  //     urlPage: ,
+  //   }));
+  // }, []);
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({
       ...formData,
       [name]: value,
     });
-    console.log("Updated formData:", formData);
+    console.log(formData);
   };
+
   const handleSubmit = (e) => {
     e.preventDefault();
+
     const requiredFields = [
       "firstname",
       "mobile",
       "email",
       "company",
       "description",
+      "urlPage",
     ];
     for (let field of requiredFields) {
       if (!formData[field]) {
@@ -37,14 +363,12 @@ const FormComponent = ({ cardId }) => {
         return;
       }
     }
-    console.log("Form data to be submitted:", formData);
-    const formElement = document.getElementById("__vtigerWebForm");
-    formElement.submit();
-    navigate("/equipment");
+
+    document.getElementById("__vtigerWebForm").submit();
   };
 
   return (
-    <div className="formComponent">
+    <div className="formComp">
       <h3>
         Отправьте заявку и наши менеджеры свяжутся с вами, чтобы обсудить все
         детали.
@@ -58,125 +382,92 @@ const FormComponent = ({ cardId }) => {
         encType="multipart/form-data"
         onSubmit={handleSubmit}
       >
-        <input
+        <Input
           type="hidden"
           name="__vtrftk"
           value="sid:849451ba6957cca3e1e69a526859b8d4d26babe8,1717221827"
         />
-        <input
+        <Input
           type="hidden"
           name="publicid"
           value="fe5bd7134852ad488f2ff3c9196a8ea7"
         />
-        <input type="hidden" name="urlencodeenable" value="1" />
-        <input type="hidden" name="name" value="m2m.kg" />
-        <table>
-          <tbody>
-            <tr>
-              <td>
-                <label htmlFor="firstname">Имя*</label>
-              </td>
-              <td>
-                <input
-                  placeholder="Имя"
-                  type="text"
-                  name="firstname"
-                  value={formData.firstname}
-                  onChange={handleChange}
-                  required
-                />
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <input type="hidden" name="lastname" value="-" required />
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <label htmlFor="mobile">Моб.*</label>
-              </td>
-              <td>
-                <input
-                  placeholder="Мобильный телефон"
-                  type="text"
-                  name="mobile"
-                  value={formData.mobile}
-                  onChange={handleChange}
-                  required
-                />
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <label htmlFor="email">Email*</label>
-              </td>
-              <td>
-                <input
-                  placeholder="Email"
-                  type="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  required
-                />
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <label htmlFor="company">Организация*</label>
-              </td>
-              <td>
-                <input
-                  placeholder="Организация"
-                  type="text"
-                  name="company"
-                  value={formData.company}
-                  onChange={handleChange}
-                  required
-                />
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <label htmlFor="description">Описание*</label>
-              </td>
-              <td>
-                <input
-                  placeholder="Описание"
-                  type="text"
-                  name="description"
-                  value={formData.description}
-                  onChange={handleChange}
-                  required
-                />
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <input type="hidden" name="cf_1326" />
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <select
-                  name="leadsource"
-                  value={formData.leadsource}
-                  onChange={handleChange}
-                  hidden
-                >
-                  <option value="Через поиск - m2m.kg" selected>
-                    Через поиск - m2m.kg
-                  </option>
-                </select>
-              </td>
-            </tr>
-          </tbody>
-          {/* <Button type="submit" value="Submit">
-            Отправить заявку
-          </Button> */}
-        </table>
-        <input className="submit" type="submit" value="Submit" />
+        <Input type="hidden" name="urlencodeenable" value="1" />
+
+        <Input type="hidden" name="name" value="m2m.kg" />
+        <Input type="hidden" name="lastname" value="-" required />
+        <Input type="hidden" name="cf_1326" />
+        <Input type="hidden" name="leadsource" value={formData.leadsource} />
+
+        <div>
+          <label htmlFor="firstname">Имя*</label>
+          <Input
+            type="text"
+            name="firstname"
+            value={formData.firstname}
+            onChange={handleChange}
+            required
+          />
+        </div>
+
+        <div>
+          <label htmlFor="mobile">Моб.*</label>
+          <Input
+            type="text"
+            name="mobile"
+            value={formData.mobile}
+            onChange={handleChange}
+            required
+          />
+        </div>
+
+        <div>
+          <label htmlFor="email">Email*</label>
+          <Input
+            type="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+            required
+          />
+        </div>
+
+        <div>
+          <label htmlFor="company">Организация*</label>
+          <Input
+            type="text"
+            name="company"
+            value={formData.company}
+            onChange={handleChange}
+            required
+          />
+        </div>
+
+        <div>
+          <label htmlFor="description">Описание*</label>
+          <Input
+            type="text"
+            name="description"
+            value={formData.description}
+            onChange={handleChange}
+            required
+          />
+        </div>
+
+        <div>
+          <label htmlFor="urlPage">URL страницы*</label>
+          <Input
+            type="text"
+            name="urlPage"
+            value={formData.urlPage}
+            onChange={handleChange}
+            required
+          />
+        </div>
+
+        <div>
+          <Button type="submit">отправить заявку</Button>
+        </div>
       </form>
     </div>
   );

@@ -13,7 +13,6 @@ import img8 from "../../assets/pribor8.png";
 import img9 from "../../assets/pribor9.png";
 import img10 from "../../assets/pribor10.png";
 import img11 from "../../assets/pribor11.png";
-import Form from "../../components/form/Form";
 import { useNavigate } from "react-router-dom";
 import FormComponent from "../../components/formComponent/FormComponent";
 const cardData = [
@@ -124,7 +123,6 @@ const EquipmentPage = () => {
           ))}
         </div>
         <div className="equipment__form">
-          {/* <Form /> */}
           <FormComponent />
         </div>
       </div>

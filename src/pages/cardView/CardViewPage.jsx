@@ -74,7 +74,6 @@ const CardViewPage = () => {
           <img src={card.img} alt={cardId} />
           <p>{card.description}</p>
         </div>
-        {/* <Form /> */}
         <FormComponent cardId={cardId} />
       </div>
     </div>

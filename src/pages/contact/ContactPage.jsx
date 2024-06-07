@@ -1,8 +1,5 @@
 import React, { useEffect } from "react";
 import "./contact.scss";
-import iconTelegram from "../../assets/icon-telegram.svg";
-import Form from "../../components/form/Form";
-import iconWhatsup from "../../assets/icon-whatsapp.svg";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import FormComponent from "../../components/formComponent/FormComponent";
@@ -28,25 +25,6 @@ const ContactPage = () => {
 
           <a href="mailto:sales@m2m.kg">sales@m2m.kg</a>
         </div>
-        {/* <div className="contact__support">
-          <h3>Техподдержка</h3>
-          <ul>
-            <li>
-              <a href="tel:+996550505071">+996550505071</a>
-            </li>
-            <li>
-              <a href="">
-                <img src={iconTelegram} alt="telegram" />
-              </a>
-            </li>
-            <li>
-              <a href="">
-                <img src={iconWhatsup} alt="telegram" />
-              </a>
-            </li>
-          </ul>
-        </div> */}
-        {/* <Form /> */}
         <FormComponent />
       </div>
     </section>

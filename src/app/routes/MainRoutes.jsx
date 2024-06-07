@@ -6,6 +6,7 @@ import SolutionPage from "../../pages/solution/SolutionPage";
 import EquipmentPage from "../../pages/equipment/EquipmentPage";
 import ContactPage from "../../pages/contact/ContactPage";
 import CardViewPage from "../../pages/cardView/CardViewPage";
+
 const MainRoutes = () => {
   return (
     <Routes>

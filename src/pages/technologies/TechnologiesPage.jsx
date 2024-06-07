@@ -7,12 +7,13 @@ import tech2 from "../../assets/tech-2.svg";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import "./technologies.scss";
-import Form from "../../components/form/Form";
 import FormComponent from "../../components/formComponent/FormComponent";
+
 const TechnologiesPage = () => {
   useEffect(() => {
     Aos.init({ duration: 1000 });
   });
+
   return (
     <section className="container">
       <div className="tehno">
