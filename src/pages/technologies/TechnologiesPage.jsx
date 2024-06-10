@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import Button from "../../components/button/Button";
 import tehno2 from "../../assets/tehno2.svg";
 import icon from "../../assets/icon.png";
 import tech from "../../assets/tech.svg";
@@ -379,7 +378,7 @@ const TechnologiesPage = () => {
             авторизацию.
           </p>
         </div>
-        {/* <Form /> */}
+
         <FormComponent />
       </div>
     </section>

@@ -1,6 +1,5 @@
 import "./navbar.scss";
 import React, { useState } from "react";
-import logo1 from "../../assets/pribor.jpg";
 import logo2 from "../../assets/pribor1 (2).png";
 import { IoMdClose } from "react-icons/io";
 import { IoMenu } from "react-icons/io5";
@@ -12,7 +11,7 @@ const Navbar = () => {
   return (
     <header className="navbar">
       <div className="wrapper">
-        <div className="navbar__container ">
+        <div className="navbar__container">
           <Link
             to={`/`}
             className="navbar__logo"
@@ -21,22 +20,32 @@ const Navbar = () => {
             <img src={logo2} alt="logo" />
           </Link>
           <div className="navbar__links">
-            <ul className={`${showNav ? "show" : ""}`}>
-              <Link to={`/`} onClick={() => setShowNav(false)}>
-                Компания
-              </Link>
-              <Link to={`/technology`} onClick={() => setShowNav(false)}>
-                Технологии
-              </Link>
-              <Link to={`/solution`} onClick={() => setShowNav(false)}>
-                Решения
-              </Link>
-              <Link to={`/equipment`} onClick={() => setShowNav(false)}>
-                Оборудование
-              </Link>
-              <Link to={`contact`} onClick={() => setShowNav(false)}>
-                Контакты
-              </Link>
+            <ul className={showNav ? "show" : ""}>
+              <li>
+                <Link to={`/`} onClick={() => setShowNav(false)}>
+                  Компания
+                </Link>
+              </li>
+              <li>
+                <Link to={`/technology`} onClick={() => setShowNav(false)}>
+                  Технологии
+                </Link>
+              </li>
+              <li>
+                <Link to={`/solution`} onClick={() => setShowNav(false)}>
+                  Решения
+                </Link>
+              </li>
+              <li>
+                <Link to={`/equipment`} onClick={() => setShowNav(false)}>
+                  Оборудование
+                </Link>
+              </li>
+              <li>
+                <Link to={`/contact`} onClick={() => setShowNav(false)}>
+                  Контакты
+                </Link>
+              </li>
             </ul>
             <div className="navbar__menu" onClick={() => setShowNav(!showNav)}>
               {showNav ? <IoMdClose /> : <IoMenu />}

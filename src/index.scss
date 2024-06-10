@@ -8,22 +8,11 @@
   --blue-color: #3b8de0;
 }
 
-@media (max-width: 992px) {
-  /* Стили для экранов до 992px */
-}
-
-@media (max-width: 768px) {
-  /* Стили для экранов до 768px */
-}
-
-@media (max-width: 576px) {
-  /* Стили для экранов до 576px */
-}
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  // user-select: none;
+  user-select: none;
   scroll-behavior: smooth;
   font-family: Rubik, "sun-serif";
 }
