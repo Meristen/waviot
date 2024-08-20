@@ -56,4 +56,13 @@
     margin: 0 auto;
     padding: 0 50px;
   }
+  @media (max-width: 520px) {
+    h1 {
+      font-size: 30px;
+    }
+    p {
+      padding: 20px;
+      font-size: 15px;
+    }
+  }
 }
